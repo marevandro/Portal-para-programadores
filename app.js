@@ -11,7 +11,7 @@ app.listen(PORT, function () {
 
 
 // body parser
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 
 // db connection
@@ -27,6 +27,9 @@ db
 
 // routes
 app.get('/', (req, res) => {
-  res.send('Está funcionando');
+  res.send('Está funcionando 3');
 });
+
+//jobs routes
+app.use('/jobs', require('./routes/jobs'));
 
