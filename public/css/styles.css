@@ -30,7 +30,8 @@
 
 .nav-link.btn.btn-primary:hover,
 #search-form button:hover,
-.list-group-item a:hover {
+.list-group-item a:hover,
+#form-box button:hover {
   background-color: #FFF;
   color: #F03E3E;
   border-color: #F03E3E;
