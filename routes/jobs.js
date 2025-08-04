@@ -7,6 +7,11 @@ router.get('/test', (req, res) => {
 })
 
 
+router.get('/add', (req, res) => {
+  res.render('add')
+});
+
+
 // Add
 router.post('/add', (req, res) => {
   let { title, salary, company, description, email, new_job } = req.body;
