@@ -4,8 +4,7 @@ const path = require('path');
 const app = express();
 const db = require('./db/connections');
 const bodyParser = require('body-parser');
-
-
+const Job = require('./models/Job');
 const PORT = 3000;
 
 app.listen(PORT, function () {
@@ -18,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 //handle bars
 app.set('views', path.join(__dirname, 'views'));
-app.engine('handlebars', engine({defaultLayout: 'main'}));
+app.engine('handlebars', engine({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
 // static folder
@@ -38,7 +37,15 @@ db
 
 // routes
 app.get('/', (req, res) => {
-  res.render('index')
+  Job.findAll({
+    order: [['createdAt', 'DESC']]
+  })
+    .then(jobs => {
+      res.render('index', {
+        jobs
+      });
+
+    })
 });
 
 //jobs routes
