@@ -16,9 +16,9 @@
     <div class="row">
       <div class="col-md-12">
         {{#if search}}
-         <h2 id="job-list-title">Buscando vagas que contem: {{search}}</h2>
+        <h2 id="job-list-title">Buscando vagas que contem: {{search}}</h2>
         {{else}}
-          <h2 id="job-list-title">Veja as nossas vagas em destaque</h2>
+        <h2 id="job-list-title">Veja as nossas vagas em destaque</h2>
         {{/if}}
         <ul id="job-list" class="list-group">
           {{#each jobs}}
@@ -26,9 +26,9 @@
             <img src="/img/company.svg" alt="Company">
             <p>{{dataValues.company}}</p>
             <h2>{{dataValues.title}}</h2>
-            <p>{{dataValues.salary}}</p>
+            <p>R${{dataValues.salary}}</p>
             <span class="new-job-label">Nova</span>
-            <a class="btn btn-primary" href="">Ver vaga</a>
+            <a class="btn btn-primary" href="/jobs/view/{{dataValues.id}}">Ver vaga</a>
           </li>
           {{/each}}
         </ul>
