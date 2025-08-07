@@ -10,6 +10,14 @@ Durante o projeto, foram aplicados diversos conceitos fundamentais do desenvolvi
 
 ---
 
+## 🎥 Demonstração
+
+Veja o vídeo de demonstração do aplicativo em funcionamento:
+
+https://github.com/user-attachments/assets/fcc17e11-7f7e-4a07-b4e9-242551421dc8
+
+---
+
 ## 🚀 Como rodar o projeto localmente
 
 ### 📦 Pré-requisitos
